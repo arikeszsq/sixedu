@@ -1,0 +1,5 @@
+<!--components/Empty/Empty.wxml-->
+<view class="empty-container">
+    <image src="../../images/mine/empty@2x.png"></image>
+    <view>暂时没有相关数据</view>
+</view>

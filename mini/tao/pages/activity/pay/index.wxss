@@ -1,0 +1,178 @@
+/* pages/activity/pay/index.wxss */
+.pay-container {
+    background-color: #F4F8F7;
+    padding-top: 2rpx;
+}
+
+.form-info {
+    margin: 30rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+    padding: 50rpx 30rpx;
+}
+.agreement-text{
+    color: #36B8B0;
+}
+.title {
+    font-weight: bold;
+    font-size: 34rpx;
+    line-height: 88rpx;
+    border-bottom: 1rpx solid #F8F8F8;
+}
+
+.intro {
+    width: 154rpx;
+    text-align: right;
+    margin-right: 24rpx;
+}
+
+.intro text {
+    color: #FF4141;
+    margin-right: 4rpx;
+}
+
+.user-info {
+    font-size: 32rpx;
+}
+
+.placeholder-style {
+    color: #999999;
+    font-weight: bold;
+    font-size: 30rpx;
+}
+
+.user-info .form-item {
+    border-bottom: 1rpx solid #F8F8F8;
+    line-height: 88rpx;
+}
+
+/*radio未选中时样式 */
+radio .wx-radio-input {
+    /* 自定义样式.... */
+    height: 30rpx;
+    width: 30rpx;
+    margin-top: -4rpx;
+    border-radius: 50%;
+    border: 2rpx solid #979797;
+    background: transparent;
+}
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked {
+    background-color: #36B8B0 !important;
+
+}
+
+.fele-info {
+    font-weight: bold;
+    color: #333333;
+}
+
+.form-item radio-group label {
+    margin-right: 58rpx;
+}
+
+.user-info input {
+    height: 88rpx;
+    line-height: 88rpx;
+    flex: 1
+}
+
+.course-item {
+    padding: 28rpx;
+    border: 2rpx solid #ddd;
+    margin-top: 30rpx;
+}
+
+.image-tu {
+    width: 160rpx;
+    height: 90rpx;
+    flex-grow: 0;
+    margin-right: 38rpx;
+}
+
+.course-item image {
+    width: 160rpx;
+    height: 90rpx;
+    background-color: #f1f1f1;
+}
+
+.course-item .info {
+    flex: 1
+}
+
+.title-course {
+    width: 380rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 30rpx;
+}
+
+.course-item .des {
+    font-size: 24rpx;
+    margin-top: 24rpx;
+    color: #858585;
+    width: 380rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.agreement {
+    margin-top: 30rpx;
+}
+
+
+/*radio未选中时样式 */
+checkbox .wx-checkbox-input {
+    /* 自定义样式.... */
+    width: 40rpx;
+    height: 40rpx;
+    border: 2rpx solid #ddd;
+    background: transparent;
+}
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    width: 40rpx;
+    height: 40rpx;
+    color: #fff;
+    border: 2rpx solid #36B8B0;
+    background-color: #36B8B0 !important;
+
+}
+
+.bottom {
+    line-height: 120rpx;
+    height: 120rpx;
+}
+.pay-container{
+    padding-bottom: 200rpx;
+    position: relative;
+}
+.bottom{
+    position: fixed;
+    width: 100%;
+    bottom: 0rpx;
+    left: 0rpx;
+}
+.price {
+    width: 290rpx;
+    flex-grow: 0;
+    text-align: center;
+    background-color: #fff;
+    font-size: 30rpx;
+    color:#FF7A08;
+}
+.price text{
+    color: #858585;
+}
+
+.confirm {
+    flex-grow: 1;
+    background: linear-gradient(90deg, #FF7A08 0%, #FF4D00 100%);
+    text-align: center;
+    font-size: 30rpx;
+    color: #fff;
+}

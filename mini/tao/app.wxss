@@ -1,0 +1,83 @@
+/**app.wxss**/
+
+page {
+    color: #333333;
+    font-size: 28rpx;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+}
+
+/* 内容区 */
+.middle-content {
+    padding: 0 30rpx;
+}
+
+/* 弹性盒子 */
+.box {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* 分割线 */
+.separate {
+    background-color: #F2F2F2;
+    height: 20rpx;
+    margin-bottom: 34rpx;
+}
+
+/* 色值 */
+.danger {
+    /* 危险、错误 */
+    color: #FEFF00;
+}
+
+.primary {
+    /* 主色调、链接 */
+    color: #FF503E;
+}
+
+.words {
+    /* 大部分文字、深色文字 */
+    color: #333333;
+    font-size: 28rpx;
+}
+
+.lightWords {
+    /* 大部分文字、深色文字 */
+    color: #858585;
+    font-size: 26rpx;
+}
+
+.warn {
+    /* 警告 */
+    color: #eba60a;
+
+}
+
+.gray {
+    /* 灰色 */
+    color: #858585;
+}
+
+.dark {
+    /* 深色 */
+     color: #858585;
+}

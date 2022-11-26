@@ -1,0 +1,124 @@
+@import "../../app.wxss";
+.mine-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(#fff, #f5f5f5 ,#f5f5f5, #f5f5f5);
+}
+
+.top-avatar {
+    padding: 30rpx 42rpx 0rpx 56rpx
+}
+
+.top-avatar .avatar {
+    width: 106rpx;
+    height: 106rpx;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+
+.top-avatar .name {
+    font-size: 34rpx;
+    flex-grow: 1;
+}
+
+.award {
+    font-size: 24rpx;
+    text-align: center;
+}
+
+.award-image {
+    width: 60rpx;
+    height: 56rpx;
+}
+
+.money-container {
+    font-size: 24rpx;
+    padding: 46rpx 44rpx 40rpx 46rpx
+}
+
+.money-m {
+    margin-left: 12rpx;
+    color: #FE8167;
+    font-size: 26rpx;
+    margin-right: 50rpx;
+    letter-spacing: 8rpx;
+}
+
+.money-xian {
+    margin: 0 50rpx;
+}
+
+.money-image {
+    width: 62rpx;
+    height: 58rpx;
+    margin-right: 12rpx;
+}
+
+.money-arrow {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.money-arrow-image {
+
+    width: 12rpx;
+    height: 22rpx;
+}
+
+
+.index-order .top {
+    margin-bottom: 32rpx;
+}
+
+.order-one {
+    font-size: 30rpx;
+    margin-right: 26rpx;
+}
+
+.order-two {
+    font-size: 24rpx;
+    color: #FE8167;
+}
+
+.index-item-list {
+    border-radius: 8rpx;
+    background-color: #fff;
+    padding: 30rpx 40rpx;
+    margin: 0rpx 26rpx 20rpx 26rpx
+}
+
+.order-bottom-list {
+    text-align: center;
+    margin-right: 110rpx;
+}
+
+.order-bottom-image {
+    width: 64rpx;
+    height: 64rpx;
+}
+
+.request-list {
+    border-radius: 8rpx;
+    margin-right: 30rpx;
+    text-align: center;
+    width: 100%;
+    height: 178rpx;
+    background-color: rgba(255, 121, 8, 0.1);
+    box-sizing: border-box;
+    padding-top: 42rpx;
+}
+
+.request-list .share-number {
+    font-size: 30rpx;
+}
+
+.request-list .share-n {
+    font-size: 50rpx;
+}
+
+.space-arae {
+    height: 220rpx;
+}

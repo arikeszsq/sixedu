@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "Empty":"../../components/Empty/Empty"
+    }
+}

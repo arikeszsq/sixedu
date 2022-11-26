@@ -1,0 +1,29 @@
+/* pages/myProfit/myProfit.wxss */
+.profit-container {
+    width: 100%;
+}
+
+.container-p {
+    margin: 30rpx;
+}
+
+.item {
+    font-size: 28rpx;
+    margin-bottom: 30rpx;
+    padding-bottom: 30rpx;
+    border-bottom: 2rpx solid #f1f1f1;
+}
+.title{
+    margin-bottom: 20rpx;
+}
+.time {
+    font-size: 26rpx;
+    color: rgb(150, 150, 150);
+}
+.order{
+    font-size: 26rpx;
+    color: rgb(150, 150, 150)
+}
+.desc .right{
+    color: #FF4D00 ;
+}

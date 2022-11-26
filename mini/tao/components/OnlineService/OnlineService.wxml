@@ -1,0 +1,25 @@
+<view class="dialogue {{isShow?'active':''}}">
+    <view class=" dialogue-container">
+        <view class="dialogue-item">
+            <view class="dis-top">
+                <view class="title">联系商家</view>
+                <view class="closed primary" bindtap="closedHanler">+</view>
+            </view>
+            <view class="contain-disa">
+                <!-- 循环位置 -->
+                <view class="dis-item" wx:for="{{info}}" wx:key="index">
+                    <view class="dis-title">{{item.name}}</view>
+                    <view class="dis-tel-num item-dis-one box justify-between" wx:if="{{item.mobile}}">
+                        <view class="dis-left-t">{{item.mobile}}</view>
+                        <navigator class="dis-btn" url="tel:{{item.mobile}}">拨号</navigator>
+                    </view>
+                    <view class="dis-address item-dis-one box justify-between" wx:if="{{item.area}}">
+                        <view class="dis-left-t">{{item.area}}</view>
+                        <view class="dis-btn dis-btn-addre" bindtap="goMap">导航</view>
+                    </view>
+                    <image src="{{item.pic}}" class="code-dis" wx:if="{{item.pic}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

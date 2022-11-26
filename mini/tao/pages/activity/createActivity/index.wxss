@@ -1,0 +1,70 @@
+/* pages/activity/createActivity/index.wxss */
+
+.create-activity-container {
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 20rpx;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.activity-form .item{
+    box-sizing: border-box;
+    padding:0rpx 30rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    border-radius: 10rpx;
+    margin-bottom: 16rpx;
+    background-color: #f7f7f7;
+}
+.activity-form .item .text{
+    width: 170rpx;
+}
+.activity-form .item input{
+    height: 90rpx;
+    line-height: 90rpx;
+}
+.phcolor{
+    color: #ccc;
+}
+.contact .title{
+    margin-top: 40rpx;
+    font-weight: bold;
+    font-size: 36rpx;
+}
+.code-c{
+    padding:40rpx;
+    justify-content: center;
+}
+.code{
+    text-align: center;
+    width: 250rpx;
+    height: 250rpx;
+    background-color: #000;
+}
+.sub-title{
+    padding-bottom: 20rpx;
+    color: rgb(175, 175, 175);
+}
+.number-info{
+    justify-content: space-between;
+}
+.number-info .call{
+    border:2rpx solid rgb(238, 98, 5);
+    border-radius: 50rpx;
+    color: rgb(238, 98, 5);
+    padding:8rpx 24rpx;
+}
+.footer{
+    text-align: center;
+}
+.copy{
+    color: rgb(175, 175, 175);
+}
+.submit{
+width: 100%;
+background-image: linear-gradient(90deg, #FF7A08 0%, #FF4D00 100%);
+color: #fff;
+border-radius: 40rpx;
+margin-top: 20rpx;
+line-height: 80rpx;
+}

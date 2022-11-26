@@ -1,0 +1,3 @@
+<block wx:for="{{news}}"wx:for_item="item" wx:key="index">
+  <view>{{item.id}}</view>
+</block>

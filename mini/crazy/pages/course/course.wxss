@@ -1,0 +1,234 @@
+/* 地图 */
+@import "../../app.wxss";
+.course-container{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0rpx;
+    height: 100%;
+}
+.map {
+    position: absolute;
+    height: 106rpx;
+    top: 0rpx;
+    left: 0rpx;
+    background: rgba(255, 77, 0, 0.1);
+    padding: 30rpx 26rpx 30rpx;
+    box-sizing: border-box;
+}
+
+.map .icons {
+    width: 36rpx;
+    margin-right: 20rpx;
+    height: 47rpx;
+}
+
+.address {
+    font-size: 28rpx;
+    margin-right: 28rpx;
+}
+
+.home-set {
+    font-size: 28rpx;
+    white-space: nowrap;
+    color: rgba(0, 147, 255, 1);
+}
+
+
+/* swiper */
+.block {
+    height: 20rpx;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+.menu-content {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 0rpx;
+    left: 0;
+    top: 0rpx;
+    overflow: hidden;
+}
+
+.menu-container {
+    flex: 0 0 160rpx;
+    background: #F2F4F8
+}
+
+.scroll-view {
+    width: 100%;
+    height: 100%
+}
+
+.scroll-view-list {
+    width: 100%;
+    height: 100%
+}
+
+.scroll-view-item {
+    height: 98rpx;
+    width: 100%;
+    font-size: 28rpx;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.scroll-view-item.active {
+    background: #fff;
+
+}
+
+.container-list {
+    flex: 1;
+    height: 100%
+}
+
+.swiper-view-list {
+    height: 100%;
+    box-sizing: border-box;
+    flex: 1;
+    width: 100%;
+    padding: 0rpx 20rpx
+}
+
+.swiper-view-item {
+    display: flex;
+    position: relative;
+
+}
+
+.swiper-view-item .title {
+    font-size: 30rpx;
+}
+
+.course-title {
+    letter-spacing: 2rpx;
+    line-height: 26rpx;
+    padding: 40rpx 20rpx 30rpx 20rpx;
+}
+
+.view-item-title {
+    position: relative;
+    width: 100%;
+    border: 1px solid #dfdfdf;
+    color: #333;
+    padding: 22rpx 30rpx;
+    font-size: 30rpx;
+    margin-bottom: 20rpx;
+}
+
+.view-item-title .desc {
+    font-size: 24rpx;
+}
+
+.view-item-title .item-images {
+    width: 160rpx;
+    height: 80rpx;
+    margin-right: 8rpx;
+}
+
+.view-item-title .content {
+    flex-grow: 1px;
+    width: 100%;
+    line-height: 38rpx;
+}
+
+/* 激活样式 */
+.view-item-title.active {
+    border: 1px solid #FF5301
+}
+
+.view-item-title.active .image-positon {
+    display: block;
+}
+
+.view-item-title .image-positon {
+    display: none;
+    position: absolute;
+    width: 40rpx;
+    height: 40rpx;
+    right: 0rpx;
+    bottom: 0rpx;
+}
+
+.view-item-title .content text {
+    margin-right: 30rpx;
+}
+
+.service {
+    position: absolute;
+    width: 100%;
+    height: 120rpx;
+    background-color: #fff;
+    line-height: 120rpx;
+    bottom: 0px;
+}
+
+.service .choose {
+    width: 210rpx;
+    padding-left: 40rpx;
+    color: #858585;
+}
+
+.service .share {
+    color: #fff;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 30rpx;
+    background-image: linear-gradient(#FF7A08, #FF4D00);
+}
+
+.dislogue-bj {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.display-show{
+    display: block;
+}
+
+.display-hide{
+    display: none;
+}
+
+
+.dislogue {
+    box-sizing: border-box;
+    padding:50rpx 50rpx;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 650rpx;
+    border-radius: 8rpx;
+    background-color: #fff;
+
+}
+.dislogue .title{
+    text-align: center;
+    font-size: 30rpx;
+}
+.dislogue .desc{
+    font-size: 24rpx;
+    line-height: 70rpx;
+    color: #858585;
+}
+.address{
+    margin-bottom: 30rpx;
+}
+.comfire-container{
+    justify-content: space-around;
+    margin-top: 60rpx;
+}
+.comfire-container .comfire{
+    color: #05c200;
+}

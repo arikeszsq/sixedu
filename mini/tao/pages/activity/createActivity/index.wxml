@@ -1,0 +1,41 @@
+<!--pages/activity/createActivity/index.wxml-->
+<view class="create-activity">
+    <form bindsubmit="createNewActivity">
+        <view class="create-activity-container box">
+            <view class="activity-form">
+                <view class="item box">
+                    <view class="text">商家名</view>
+                    <input type="text" name="shop_name" placeholder="请输入" placeholder-class="phcolor" />
+                </view>
+                <view class="item box">
+                    <view class="text">联系人</view>
+                    <input type="text" name="username" placeholder="请输入" placeholder-class="phcolor" />
+                </view>
+                <view class="item box">
+                    <view class="text">联系电话</view>
+                    <input type="text" name="mobile" placeholder="请输入" placeholder-class="phcolor" />
+                </view>
+                <view class="contact">
+                    <view class="title">联系我们</view>
+                    <view class="code-c box">
+                        <image src="{{info.my_activity_pic}}" class="code"></image>
+                    </view>
+
+                    <view class="sub-title">联系电话</view>
+                    <view class="number-info box">
+                        <view class="tel-num">{{info.my_activity_mobile}}</view>
+                        <navigator class="call" url="tel:{{info.my_activity_mobile}}">拨打</navigator>
+                    </view>
+                </view>
+            </view>
+
+
+            <view class="footer">
+                <view class="copy">版权所有
+                </view>
+                <!-- <view class="submit"  form-type='submit'>提交</view> -->
+                <button class="btn-ss submit" form-type='submit'>提交</button>
+            </view>
+        </view>
+    </form>
+</view>

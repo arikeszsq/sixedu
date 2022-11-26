@@ -1,0 +1,35 @@
+<!--pages/myAward/myAward.wxml-->
+<view class="my-award-container box">
+    <scroll-view class="scroll-view box">
+        <view class="scroll-view-container box">
+            <view class="scroll-view-item {{currentIndex===0?'active':''}}" bindtap="changeScrollView" data-index="0">全部奖励</view>
+            <view class="scroll-view-item {{currentIndex===1?'active':''}}" bindtap="changeScrollView" data-index="1">我的奖励</view>
+        </view>
+    </scroll-view>
+
+    <swiper current="swiper" current="{{currentIndex}}" bindchange="bindchangeSwiper">
+        <swiper-item class="swiper-item">
+            <Empty wx:if="{{info.length===0}}"></Empty>
+            <view class="swiper-item-container box" wx:for="{{info}}" wx:key="id">
+                <image src="../../images/mine/xiaoxi.png"></image>
+                <view class="item-right">
+                    <view class="title">{{item.name}}（运费自理）</view>
+                    <view class="swiper-item-desc box align-center justify-between">
+                        <view class="desc gray">
+                            <view>{{item.short_name}}</view>
+                            <view>{{item.description}}</view>
+                            <view class="kjeikai">未解锁</view>
+                        </view>
+                        <view class="free-btn">免费获取</view>
+                    </view>
+                </view>
+
+            </view>
+
+        </swiper-item>
+        <swiper-item>
+        <!-- 判断一下资料是否为空 -->
+            <Empty></Empty>
+        </swiper-item>
+    </swiper>
+</view>

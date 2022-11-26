@@ -1,0 +1,149 @@
+
+
+.index-container{
+    position: relative;
+}
+.tab-Bar-container{
+    position: fixed;
+    bottom: 0px;
+    height: 120rpx;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #f2f2f2;
+}
+.tab-container image{
+    width: 40rpx;
+    height: 40rpx;
+}
+/* banner */
+
+.banner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.banner {
+    width: 750rpx;
+    height: 750rpx;
+}
+
+.price-container {
+    background-color: #FF503E;
+    padding: 20rpx 0rpx
+}
+
+.price-container .price {
+    font-size: 58rpx;
+}
+
+.price-container .yuan {
+    font-size: 32rpx;
+}
+
+.price-container .end-padding {
+    font-size: 32rpx;
+}
+
+.price-container .des {
+    font-size: 28rpx;
+    color: #fff;
+    margin-left: 18rpx;
+}
+
+.title-container .title {
+    font-size: 34rpx;
+    padding-top: 34rpx;
+    padding-bottom: 14rpx;
+}
+
+.title-container .des {
+    font-size: 26rpx;
+    padding-bottom: 40rpx;
+}
+
+.title-container .scan {
+    font-size: 26rpx;
+    padding-bottom: 26rpx;
+}
+
+.title-container .scan .number {
+    padding-right: 10rpx;
+}
+
+.sub-container .scan .separator {
+    padding: 0 16rpx;
+}
+
+.sub-image {
+    width: 102rpx;
+    height: 102rpx;
+}
+
+/* 购买记录 */
+.purchase-container{
+    height: 314rpx;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+.separate-purchase{
+    margin-top: 50rpx;
+}
+.tab-right {
+    overflow: hidden;
+    margin: 20rpx auto;
+    box-sizing: border-box;
+    height: 300rpx;
+}
+.purchase-item {
+    height: 100rpx;
+    line-height:100rpx ;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.avater{
+    height: 30rpx;
+    width: 30rpx;
+    margin-right: 12rpx;
+}
+
+.content-item .avater {
+    height: 58rpx;
+    width: 58rpx;
+}
+/* 活动tab */
+.tab-scroll {
+    width: 100%;
+}
+.tab-scroll-box {
+    display: flex;
+}
+.scroll-view-item {
+    margin-right: 40rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #777777;
+    padding-bottom: 16rpx;
+}
+
+.active {
+    padding-bottom: 16rpx;
+    margin-right: 40rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #f30;
+    position: relative;
+}
+.active::after{
+    content: "";
+    position: absolute;
+    width: 38rpx;
+    height: 4rpx;
+    bottom: 0rpx;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #FF503E;
+}

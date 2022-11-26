@@ -1,0 +1,41 @@
+<!--pages/myAward/myAward.wxml-->
+<view class="my-award-container box">
+    <scroll-view class="scroll-view box">
+        <view class="scroll-view-container box">
+            <view class="scroll-view-item {{currentIndex===0?'active':''}}" bindtap="changeScrollView" data-index="0">待成团</view>
+            <view class="scroll-view-item {{currentIndex===1?'active':''}}" bindtap="changeScrollView" data-index="1">已成团</view>
+        </view>
+    </scroll-view>
+
+    <swiper current="swiper" current="{{currentIndex}}" bindchange="bindchangeSwiper">
+        <swiper-item class="swiper-item">
+            <Empty wx:if="{{info.length===0}}"></Empty>
+            <view class="swiper-item-container box" wx:for="{{info}}" wx:key="id">
+            <!-- //头像 -->
+            <view class="avatar">
+                <image src=""></image>
+                <!-- 判断是否是团长 -->
+                <view class="team-top" wx:if="{{true}}">团长</view>
+            </view>
+                
+                <view class="item-right">
+                    <view class="title">娃娃</view>
+                    <view class="swiper-item-desc box align-center justify-between">
+                        <view class="desc gray">
+                            <view>购买时间：2022-08-21 16:1</view>
+                            <view>订单号：20221123044321231 </view>
+                            <view>成团时间：2022-08-22 15:22:21</view>
+                        </view>
+                      
+                    </view>
+                </view>
+
+            </view>
+
+        </swiper-item>
+        <swiper-item>
+        <!-- 判断一下资料是否为空 -->
+            <Empty></Empty>
+        </swiper-item>
+    </swiper>
+</view>

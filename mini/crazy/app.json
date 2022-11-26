@@ -1,0 +1,25 @@
+{
+    "pages": [
+        "pages/activity/one/index",
+        "pages/mine/mine",
+        "pages/myAward/myAward",
+        "pages/course/course",
+        "pages/myOrder/myOrder",
+        "pages/Agreement/Agreement",
+        "pages/activity/many/index",
+        "pages/index/index",
+        "pages/position/position",
+        "pages/checkSchool/checkSchool",
+        "pages/list/list",
+        "pages/logs/logs",
+        "pages/myProfit/myProfit"
+    
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "番茄亲子·活动名称",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json"
+}

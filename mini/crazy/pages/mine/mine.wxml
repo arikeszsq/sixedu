@@ -1,0 +1,105 @@
+<view class="mine-container ">
+    <view class="top-avatar box align-center">
+        <image class="avatar" src=""></image>
+        <view class="name">{{info.name}}</view>
+        <view class="award">
+            <image class="award-image" src="../../images/mine/xiaoxi@2x.png"></image>
+            <view>奖励提醒</view>
+        </view>
+    </view>
+    <!-- 钱包余额 -->
+    <view class="money-container box align-center">
+        <image src="{{info.avatar}}" wx:if="info.avatar" class="money-image"></image>
+        <view class="money-ti">钱包余额</view>
+        <view class="money-m">¥0</view>
+        <view class="money-xian"> |</view>
+
+        <view money-ti>历史提现</view>
+        <view class="money-m">¥0</view>
+        <view class="money-arrow">
+            <image src="../../images/mine/arrow@2x.png" class="money-arrow-image"></image>
+        </view>
+    </view>
+    <view class="main-container">
+        <!-- 我的订单 -->
+        <view class="index-item-list index-order">
+            <view class="top box align-center" bindtap="toMyOrder">
+                <view class="order-one">我的订单</view>
+                <view class="order-two">我的订单</view>
+                <view class="money-arrow">
+                    <image src="../../images/mine/arrow@2x.png" class="money-arrow-image"></image>
+                </view>
+
+            </view>
+            <view class="bottom box align-center">
+                <view class="order-bottom-list">
+                    <image src="../../images/mine/daiwancheng@2x.png" class="order-bottom-image"></image>
+                    <view>待完成</view>
+                </view>
+                <view class="order-bottom-list">
+                    <image src="../../images/mine/yiwancheng@2x.png" class="order-bottom-image"></image>
+                    <view>已完成</view>
+                </view>
+
+            </view>
+        </view>
+        <!-- 我的礼品 -->
+        <view class="index-item-list index-order" bindtap="toMyAward">
+            <view class="box align-center">
+                <view class="order-one">我的礼品</view>
+                <view class="money-arrow">
+                    <image src="../../images/mine/arrow@2x.png" class="money-arrow-image"></image>
+                </view>
+            </view>
+        </view>
+        <!--收益中心  -->
+        <view class="index-item-list index-profit" bindtap="toMyProfit">
+            <view class="box align-center">
+                <view class="order-one">收益中心</view>
+                <view class="money-arrow">
+                    <image src="../../images/mine/arrow@2x.png" class="money-arrow-image"></image>
+                </view>
+            </view>
+        </view>
+        <!-- 邀请记录 -->
+        <view class="index-item-list request-record">
+            <view class="top box align-center">
+                <view class="order-one" style="padding-bottom: 20rpx;">邀请记录</view>
+
+                <view class="money-arrow">
+                    <image src="../../images/mine/arrow@2x.png" class="money-arrow-image"></image>
+                </view>
+
+            </view>
+            <view class="bottom box align-center justify-between">
+                <view class="request-list">
+                    <view class="share-number">分享人数</view>
+                    <view class="primary share-n">63</view>
+                </view>
+                <view class="request-list">
+                    <view class="share-number">邀请人数</view>
+                    <view class="primary share-n">63</view>
+                </view>
+                <view class="request-list">
+                    <view class="share-number">领券人数</view>
+                    <view class="primary share-n">63</view>
+                </view>
+
+            </view>
+        </view>
+        <!-- 用户协议 -->
+        <view class="index-item-list index-profit"  bindtap="toAgreement">
+            <view class="box align-center">
+                <view class="order-one">用户协议</view>
+                <view class="money-arrow">
+                    <image src="../../images/mine/arrow@2x.png" class="money-arrow-image"></image>
+                </view>
+            </view>
+        </view>
+
+    </view>
+
+<ServiceMine></ServiceMine>
+<view class="space-arae"></view>
+
+</view>

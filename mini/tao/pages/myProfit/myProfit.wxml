@@ -1,0 +1,14 @@
+<view class="profit-container">
+    <view class="container-p">
+        <view class="item" wx:for="{{info}}" wx:key="index">
+            <view class="title">{{item.activity_name}}</view>
+            <view class="desc box justify-between">
+                <view class="left">
+                    <view class="time">{{item.created_at}}</view>
+                    <view class="order">{{item.invited_user_name}}</view>
+                </view>
+                <view class="right" wx:if="{{item.money}}">+{{item.money}}</view>
+            </view>
+        </view>
+    </view>
+</view>

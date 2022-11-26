@@ -1,0 +1,19 @@
+<!--components/Service/Service.wxml-->
+<view class="tab-Bar-container">
+    <view class="tab-container box">
+        <view class="item box">
+            <view class="item-01 item-02" bindtap="navigatorMy">
+                <image src="../../images/activity/editor@2x.png"></image>
+                <view class="gray">我的</view>
+            </view>
+            <view class="item-02" bindtap="serviceDialogue">
+                <image src="../../images/activity/service@2x.png"></image>
+                <view class="gray">客服</view>
+            </view>
+        </view>
+        <view class="item">
+            领取我的分享海报
+        </view>
+    </view>
+</view>
+<OnlineService isShow="{{isShow}}" bindtap="closedHanler"></OnlineService>

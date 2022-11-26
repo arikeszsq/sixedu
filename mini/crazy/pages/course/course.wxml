@@ -1,0 +1,69 @@
+<!--pages/course/course.wxml-->
+<!-- 地图 -->
+<view class="course-container">
+    <!-- <view class="map box justify-between align-center">
+        <image class="icons" src="../../images/activity/dizhi.png"></image>
+        <view class="address" bindtap="searchNearOrgan">
+            {{adressObj.name}}
+        </view>
+        <view class="home-set" bindtap="setHomeAdress">点击设置家的位置</view>
+    </view> -->
+
+    <view class="menu-content">
+        <view class="menu-container">
+            <scroll-view scroll-y="true" class="scroll-view">
+                <view class="scroll-view-list">
+                    <block wx:for="{{CourseCategroy}}" wx:for-item="item" wx:key="index">
+                        <view class="scroll-view-item {{indexSize === index?'active':''}}" bindtap="chooseTypes" data-index="{{index}}">{{item.name}}</view>
+                    </block>
+                </view>
+            </scroll-view>
+        </view>
+        <swiper class="container-list" current="{{indexSize}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">
+            <swiper-item wx:for="{{CourseCategroy}}" wx:for-item="item" wx:key="index">
+                <scroll-view scroll-y="true" class="swiper-view-list">
+                    <view class="swiper-view-item">
+                        <!-- 还可以选4门课程 -->
+                        <view class="course-title">还可以选<text class="primary">{{4-selectedCourse.length}}</text>门课程</view>
+                    </view>
+                    <view class="swiper-view-item" wx:for="{{CourseCategroy[indexSize].children}}" wx:key="index">
+                        <view class="view-item-title box align-center {{item.isSelected ? 'active':''}}" data-id='{{item.id}}' bindtap='getSchoolLists' hover-class='this-check'>
+                            <image src="../../images/mine/qianbao@2x.png" class="item-images"></image>
+                            <view class="content">
+                                <view class="title">{{item.name}}</view>
+                                <view class="desc gray">
+                                    <view class="box"><text>价值：￥{{item.price}}</text><text>已购：{{item.sale_num}}</text></view>
+                                    <view>机构：{{item.name}}</view>
+                                    <view>离家{{item.gap}}</view>
+                                </view>
+                            </view>
+                            <image src="../../images/mine/duihao@2x.png" class="image-positon"></image>
+                        </view>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="service box">
+        <view class="choose">已选<text class="primary">{{selectedCourse.length}}</text>个</view>
+        <view class="share" bindtap="nextHandle">下一步</view>
+    </view>
+    <view class="dislogue-bj {{dialogShow?'display-show':'display-hide'}}">
+        <view class="dislogue">
+            <view class="title"> 请确认上课校区</view>
+            <view class="desc"> 点击选择校区<text class="warn">{{selectedSchool.name}}</text>
+
+            </view>
+            <view class="address" wx:for="{{schoolLists}}" wx:key="id" data-item="{{item}}" bindtap="chooseSchoolHandle">
+                <text>{{item.name}}:</text> <text class="warn">{{item.map_area}}（{{item.msg}}）</text>
+            </view>
+
+            <view class="box comfire-container">
+                <view class="cancel" bindtap="handleCancel">取消</view>
+                <view class="comfire" bindtap="handleComfire">确认</view>
+            </view>
+
+
+        </view>
+    </view>
+</view>

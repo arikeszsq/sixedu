@@ -1,0 +1,156 @@
+<!--pages/activity/one/index.wxml-->
+<view class="one-container">
+    <!-- banner -->
+    <view class="banner-container">
+        <image class="banner-image" src=""></image>
+        <view class="banner-desc middle-content">
+            <view class="title">番茄亲子·2022艺术素质教育节·走进杭</view>
+            <view class="box banner-container-desc">
+                <view class="left">
+                    <view class="gray des-item">杭州知名品牌机构，200+校区齐聚</view>
+                    <view class="price primary">最低价： ￥<text class="price-nubmer">198
+                        </text>
+                    </view>
+                </view>
+                <view class="right">
+                    <image src="../../../images/one/xuanfuchuang@2x.png"></image>
+                </view>
+            </view>
+
+
+        </view>
+    </view>
+    <view class="gray-block"></view>
+    <view class="time-index">
+        <view class="time-container box middle-content align-center">
+            <image src="../../../images/one/time.png"></image>
+            <view class="desc">距离活动结束</view>
+            <view class="box settime">
+                <view>8</view> 天
+                <view class="nei">8</view>时 <view>8</view>分 <view>8</view>秒
+            </view>
+        </view>
+    </view>
+
+    <view class="content-index">
+        <view class="Scrabble-dough common">
+            <view class="top-container box justify-between">
+                <view class="top-list">
+                    <view class="num">12</view>
+                    <view>已浏览</view>
+                </view>
+                <view class="top-list">
+                    <view class="num">12</view>
+                    <view> 已报名</view>
+                </view>
+                <view class="top-list">
+                    <view class="num">23</view>
+                    <view>已分享</view>
+                </view>
+            </view>
+            <view class="list-container">
+                <!-- 循环位置 -->
+                <view class="item box align-center">
+                    <image src=""></image>
+                    <view class="center">
+                        <view class="title">满天星</view>
+                        <view class="desc gray">参加了<text class="primary">胡哲</text>的拼团</view>
+                    </view>
+                    <view class="right">
+                        <view class="time gray">2022-08-02 18:11</view>
+                        <view class="desc gray">成功支付<text class="primary">298.00元</text></view>
+                    </view>
+                </view>
+                <view class="item box align-center">
+                    <image src=""></image>
+                    <view class="center">
+                        <view class="title">满天星</view>
+                        <view class="desc gray">参加了<text class="primary">胡哲</text>的拼团</view>
+                    </view>
+                    <view class="right">
+                        <view class="time gray">2022-08-02 18:11</view>
+                        <view class="desc gray">成功支付<text class="primary">298.00元</text></view>
+                    </view>
+                </view>
+                <view class="item box align-center">
+                    <image src=""></image>
+                    <view class="center">
+                        <view class="title">满天星</view>
+                        <view class="desc gray">参加了<text class="primary">胡哲</text>的拼团</view>
+                    </view>
+                    <view class="right">
+                        <view class="time gray">2022-08-02 18:11</view>
+                        <view class="desc gray">成功支付<text class="primary">298.00元</text></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="common container-two">
+            <view class="title">当前团人数<text class="num">1人</text></view>
+            <view class="tow-top-container box justify-between align-center">
+                <view class="avatar box">
+                    <image src=""></image>
+                    <view class="desc">团长</view>
+                    <view class="name"> 满天星</view>
+                </view>
+                <image class="arrow" src="../../../images/one/huisearrow.png"></image>
+                <view class="btn">参加他的团</view>
+            </view>
+            <view class="box container-two-learn align-center"><text>查看TA的拼团</text>
+                <image src="../../../images/one/bl-arrow.png"></image>
+            </view>
+            <view class="container-two-desc">
+                <view>已开团46个团 </view>
+                <view>当前团购人数110人</view>
+            </view>
+            <view class="container-two-list box align-center">
+                <image src=""></image>
+                <view class="title">
+                    <view class="title-c"> 明天会更好</view>
+                    <view class="gray"> 本团已有10人</view>
+                </view>
+                <view class="team">团长</view>
+                <view class="man">已满团</view>
+            </view>
+            <view class="container-two-list box align-center">
+                <image src=""></image>
+                <view class="title">
+                    <view class="title-c"> 明天会更好</view>
+                    <view class="gray"> 本团已有10人</view>
+                </view>
+                <view class="team">团长</view>
+                <view class="man">已满团</view>
+            </view>
+            <view class="container-two-list box align-center">
+                <image src=""></image>
+                <view class="title">
+                    <view class="title-c"> 明天会更好</view>
+                    <view class="gray"> 本团已有10人</view>
+                </view>
+                <view class="team">团长</view>
+                <view class="man">已满团</view>
+            </view>
+            <view class="box container-two-learn align-center"><text>查看TA的拼团</text>
+                <image src="../../../images/one/bl-arrow.png"></image>
+            </view>
+        </view>
+        <view class="common container-three">
+            <view class="box align-center">
+                <image src="" class="tu"></image>
+                <view class="desc">
+                    <view class="title">
+                        免费赠书一年（运费自理）ssssss
+                    </view>
+                    <view class="gray">浙江省杭州市富阳区春秋北路2329号玉长</view>
+                </view>
+                <view class="kefu">
+                    <image src="../../../images/one/kefu@2x.png"></image>
+                    <view class="contact-n">联系Ta</view>
+                </view>
+            </view>
+        </view>
+        <view class="jiange"></view>
+    </view>
+
+<ServiceOne></ServiceOne>
+</view>

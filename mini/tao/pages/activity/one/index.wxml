@@ -1,0 +1,160 @@
+<!--pages/activity/one/index.wxml-->
+<view class="one-container">
+    <!-- banner -->
+    <view class="banner-container">
+        <image class="banner-image" src="{{info.bg_banner}}"></image>
+        <view class="banner-desc middle-content">
+            <view class="title">{{info.title}}</view>
+            <view class="box banner-container-desc">
+                <view class="left">
+                    <view class="gray des-item">{{info.description}}</view>
+                    <view class="price primary">最低价： ￥<text class="price-nubmer">{{info.ori_price}}
+                        </text>
+                    </view>
+                </view>
+                <view class="right">
+                    <image src="../../../images/one/xuanfuchuang@2x.png"></image>
+                </view>
+            </view>
+
+
+        </view>
+    </view>
+    <view class="gray-block"></view>
+    <view class="time-index">
+        <view class="time-container box middle-content align-center">
+            <image src="../../../images/one/time.png"></image>
+            <view class="desc">距离活动结束</view>
+            <view class="box settime">
+                <view>{{days}}</view> 天
+                <view class="nei">{{hours}}</view>时 <view>{{minutes}}</view>分 <view>{{seconds}}</view>秒
+            </view>
+        </view>
+    </view>
+
+    <view class="content-index">
+        <view class="Scrabble-dough common">
+            <view class="top-container box justify-between">
+                <view class="top-list">
+                    <view class="num">{{info.views_num}}</view>
+                    <view>已浏览</view>
+                </view>
+                <view class="top-list">
+                    <view class="num">{{info.buy_num}}</view>
+                    <view> 已报名</view>
+                </view>
+                <view class="top-list">
+                    <view class="num">{{info.share_num}}</view>
+                    <view>已分享</view>
+                </view>
+            </view>
+            <view class="list-container">
+                <!-- 循环位置 -->
+
+                <view class="item box align-center" wx:for="{{info.pay_group_list}}" wx:key="index">
+                    <image src="{{item.avatar}}"></image>
+                    <view class="center">
+                        <view class="title">{{item.name}}</view>
+                        <view class="desc gray">{{item.msg}}</view>
+                    </view>
+                    <view class="right">
+                        <view class="time gray">{{item.pay_time}}</view>
+                        <view class="desc gray">成功支付<text class="primary">{{info.real_price}}元</text></view>
+                    </view>
+                </view>
+
+            </view>
+        </view>
+        <view class="common container-two">
+            <view class="title">当前团人数<text class="num">{{info.group_current.group.current_num}}人</text></view>
+            <view class="tow-top-container box justify-between align-center">
+                <view class="avatar box">
+                    <image src="{{info.group_current.group.user.avatar}}"></image>
+                    <view class="desc">团长</view>
+                    <view class="name"> {{info.group_current.group.user.name}}</view>
+                </view>
+                <image class="arrow" src="../../../images/one/huisearrow.png"></image>
+                <view class="btn" bindtap="toGroupList">参加他的团</view>
+            </view>
+            <view class="box container-two-learn align-center" bindtap="toGroupList"><text>查看TA的拼团</text>
+                <image src="../../../images/one/bl-arrow.png"></image>
+            </view>
+            <view class="container-two-desc">
+                <view>已开团{{info.group_num}}个团 </view>
+                <view>当前团购人数{{info.group_people_num}}人</view>
+            </view>
+            <view class="container-two-list box align-center" wx:for="{{info.group_people_list}}" wx:key="index">
+                <image src="{{item.group.user.avatar}}"></image>
+                <view class="title">
+                    <view class="title-c"> {{item.group.user.name}}</view>
+                    <view class="gray"> 本团已有{{item.group.current_num}}人</view>
+                </view>
+                <view class="team">团长</view>
+                <view class="man" wx:if="{{item.group.finished ==1}}">已满团</view>
+                <view class="man" wx:else="{{item.group.current_num}}">未满团</view>
+            </view>
+            <view class="box container-two-learn align-center" bindtap="toGroupList"><text>查看TA的拼团</text>
+                <image src="../../../images/one/bl-arrow.png"></image>
+            </view>
+        </view>
+        <view class="common container-three">
+            <view class="box align-center">
+                <image src="" class="tu"></image>
+                <view class="desc">
+                    <view class="title">
+                        免费赠书一年（运费自理）ssssss
+                    </view>
+                    <view class="gray">浙江省杭州市富阳区春秋北路2329号玉长</view>
+                </view>
+                <view class="kefu">
+                    <image src="../../../images/one/kefu@2x.png"></image>
+                    <view class="contact-n">联系Ta</view>
+                </view>
+            </view>
+        </view>
+        <view class="jiange"></view>
+    </view>
+
+    <ServiceOne bindtoCourseOne="handletoCourseOne" bindtoCourseTwo="handletoCourseTwo"></ServiceOne>
+
+
+    <view class="dislogue-group-bj {{isShowDislogue?'show-dislogue':''}}">
+        <form bindsubmit="doPay">
+            <view class="dislogue-group">
+                <view class="top">
+                    <view class="dislogue-title">立即开团</view>
+                    <view class="closed" bindtap="handleClosed">❌</view>
+                </view>
+                <view class="from-dislogue">
+                    <view class="group-item-dis">
+                        <text>姓名</text>
+                        <input type="text" name="name" placeholder-class="placeholder-style" placeholder="请输入" value="{{name}}" />
+                    </view>
+                    <view class="group-item-dis">
+                        <text>手机</text>
+                        <input type="text" name="phoneNum" placeholder-class="placeholder-style" placeholder="请输入" value="{{phoneNum}}" />
+                    </view>
+                    <view class="desc-dis">请在姓名一栏填写孩子名字</view>
+                    <view class="info">
+                        <!-- 下来选框-->
+                        <view class="bt">信息一</view>
+                        <input type="text" name="info1" placeholder-class="placeholder-style" placeholder="请输入" value="{{info1}}" />
+                    </view>
+                    <view class="info info2">
+                        <view class="bt">信息二</view>
+                        <input type="text" name="info2" placeholder-class="placeholder-style" placeholder="请输入" value="{{info2}}" />
+                    </view>
+                    <!-- <view class="btn-ss" bindtap="doPay">提交</view> -->
+                    <button class="btn-ss" form-type='submit'>提交</button>
+                </view>
+            </view>
+        </form>
+    </view>
+    <view class="createActivity">
+        <navigator url="/pages/activity/createActivity/index" class="text-act">
+            <view>我要</view>
+            <view>做活动</view>
+        </navigator>
+    </view>
+
+</view>

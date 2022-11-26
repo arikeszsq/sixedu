@@ -1,0 +1,7 @@
+<!--pages/Agreement/Agreement.wxml-->
+<view class="agree-container">
+    <view class="title">购买协议</view>
+    <view class="container-text">
+        <rich-text nodes="{{info.buy_protocal}}"></rich-text>
+    </view>
+</view>

@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "ServiceOne":"../../../components/ServiceOne/index"
+    }
+}

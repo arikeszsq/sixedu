@@ -1,0 +1,41 @@
+<!--components/Service/Service.wxml-->
+<view class="tab-Bar-container">
+    <view class="tab-container box">
+        <view class="item box">
+            <view class="item-01 item-02" bindtap="navigatorMy">
+                <image src="../../images/activity/editor@2x.png"></image>
+                <view class="gray">我的</view>
+            </view>
+            <view class="item-02" bindtap="serviceDialogue">
+                <image src="../../images/activity/service@2x.png"></image>
+                <view class="gray">客服</view>
+            </view>
+        </view>
+
+        <view class="item" data-type="1" bindtap="toCourseOne">
+            <view class="intro">单独购买</view>
+            <view class="price">￥{{oriPrice}}</view>
+        </view>
+        <view class="item"  data-type="2" bindtap="toCourseTwo">
+            <view class="intro">2人拼团</view>
+            <view class="price">￥{{realPrice}}</view>
+        </view>
+    </view>
+</view>
+<view class="dialogue {{isShow?'active':''}}">
+    <view class=" dialogue-container">
+        <view class="dialogue-item">
+            <view class="title words">在线客服：客服号007</view>
+            <view class="phone-container-bj box">
+                <view class="phone-container box">
+                    <image class="icon-call" src="../../images/activity/call_03.jpg"></image>
+                    <view class="phone">13687654323</view>
+                    <navigator class="navigator-call" url="tel:13687654323">一键拨打</navigator>
+                </view>
+            </view>
+            <image src="" class="code"></image>
+            <view class="gray" style="font-size: 26rpx;">长按识别二维码联系我们</view>
+            <view class="closed primary" bindtap="closedHanler">关闭</view>
+        </view>
+    </view>
+</view>

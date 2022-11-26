@@ -1,0 +1,292 @@
+.index-container {
+    position: relative;
+}
+
+.bottom-padding {
+    overflow: hidden;
+    height: 160rpx;
+}
+
+/* banner */
+
+.banner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.banner {
+    width: 750rpx;
+    height: 750rpx;
+}
+
+.price-container {
+    background-color: #FF503E;
+    padding: 20rpx 0rpx
+}
+
+.price-container .price {
+    font-size: 58rpx;
+}
+
+.price-container .yuan {
+    font-size: 32rpx;
+}
+
+.price-container .end-padding {
+    font-size: 32rpx;
+}
+
+.price-container .des {
+    font-size: 28rpx;
+    color: #fff;
+    margin-left: 18rpx;
+}
+
+.title-container .title {
+    font-size: 34rpx;
+    padding-top: 34rpx;
+    padding-bottom: 14rpx;
+}
+
+.title-container .des {
+    font-size: 26rpx;
+    padding-bottom: 40rpx;
+}
+
+.title-container .scan {
+    font-size: 26rpx;
+    padding-bottom: 26rpx;
+}
+
+.title-container .scan .number {
+    padding-right: 10rpx;
+}
+
+.sub-container .scan .separator {
+    padding: 0 16rpx;
+}
+
+.sub-image {
+    width: 102rpx;
+    height: 102rpx;
+}
+
+/* 购买记录 */
+.purchase-container {
+    height: 314rpx;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+.separate-purchase {
+    margin-top: 50rpx;
+}
+
+.tab-right {
+    overflow: hidden;
+    margin: 20rpx auto;
+    box-sizing: border-box;
+    height: 300rpx;
+}
+
+.purchase-item {
+    height: 100rpx;
+    line-height: 100rpx;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.avater {
+    height: 30rpx;
+    width: 30rpx;
+    margin-right: 12rpx;
+}
+
+.content-item .avater {
+    height: 58rpx;
+    width: 58rpx;
+}
+
+/* 机构视频 */
+
+/* 地图 */
+.map {
+    margin: 30rpx 0px;
+    background: rgba(255, 77, 0, 0.1);
+    padding: 30rpx 26rpx 30rpx;
+}
+
+.map .icons {
+    width: 36rpx;
+    margin-right: 20rpx;
+    height: 47rpx;
+}
+
+.address {
+    width: 392rpx;
+    font-size: 28rpx;
+    margin-right: 28rpx;
+}
+
+.home-set {
+    font-size: 28rpx;
+    white-space: nowrap;
+    color: rgba(0, 147, 255, 1);
+}
+
+/* 活动tab */
+.tab-scroll {
+    width: 100%;
+}
+
+.tab-scroll-box {
+    display: flex;
+}
+
+.scroll-view-item {
+    position: relative;
+    margin-right: 40rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #777777;
+    padding-bottom: 16rpx;
+}
+
+.active {
+    color: #f30;
+}
+
+.active::after {
+    content: "";
+    position: absolute;
+    width: 38rpx;
+    height: 5rpx;
+    bottom: 0rpx;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #FF503E;
+}
+
+/* 机构详情 */
+.timu-list1-item {
+    border: 1px solid #dfdfdf;
+    padding: 28rpx 14rpx;
+    margin-bottom: 30rpx;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    height: 234rpx;
+}
+
+.timu_list1 .timu-list1-item:last-child {
+    margin-bottom: 0rpx;
+}
+
+.image-container {
+    width: 197rpx;
+ 
+
+}
+
+.image-container image {
+    width: 197rpx;
+}
+
+.timu-list1-container .title {
+    font-size: 32rpx;
+    padding-bottom: 28rpx;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap; 
+}
+
+.timu-list1-container {
+    margin-left: 40rpx;
+    width: 252rpx;
+    flex-grow: 1;
+}
+
+.timu-list1-item .address {
+    width: 170rpx;
+    text-align: right;
+    align-self: flex-end;
+}
+
+/* 视频 */
+.video-container {
+    margin-top: 28rpx;
+}
+
+.video-container swiper {
+    width: 100%;
+    height: 424rpx;
+    overflow: hidden;
+
+}
+
+.video-container swiper-item {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.video-container swiper video {
+    width: 700rpx;
+}
+
+.viedo-scroll {
+    margin-top: 40rpx;
+    align-items: center;
+    padding-left: 26rpx;
+}
+
+.viedo-scroll .video-image {
+    width: 210rpx;
+    height: 106rpx;
+    object-fit: fit;
+    border: 1px solid #dfdfdf;
+    margin-bottom: 14rpx;
+}
+
+.viedo-scroll image {
+    width: 210rpx;
+    height: 106rpx;
+}
+
+.viedo-scroll .item {
+    margin-right: 20rpx;
+    font-size: 28rpx;
+}
+
+.viedo-scroll .active {
+    color: rgba(255, 77, 0, 1);
+}
+
+.viedo-scroll .active .video-image {
+    border: 1px solid rgba(255, 77, 0, 1)
+}
+
+/* 结束 */
+.index-title {
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #666666;
+    padding-bottom: 30rpx;
+    position: relative;
+    background: #FFF;
+}
+
+.index-title::after {
+    content: "";
+    border-radius: 2rpx;
+    position: absolute;
+    width: 38rpx;
+    height: 6rpx;
+    background: #FF4D00;
+    bottom: 0rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}

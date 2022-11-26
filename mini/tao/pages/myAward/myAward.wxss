@@ -1,0 +1,95 @@
+/* pages/myAward/myAward.wxss */
+.my-award-container {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.scroll-view {
+    width: 100%;
+    padding: 28rpx 0rpx;
+    border-bottom: 1px solid #f2f2f2;
+}
+.desc{
+    font-size: 26rpx;
+}
+.scroll-view-container {
+    justify-content: space-evenly;
+    background-color: #fff;
+}
+
+.my-award-container swiper {
+    height: 100%;
+    background-color: #fff;
+}
+
+.swiper-item {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.scroll-view-item.active {
+    color: #FF4D00;
+    font-weight: 900;
+    padding-bottom: 18rpx;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.scroll-view-item.active::after {
+    position: absolute;
+    width: 56rpx;
+    height: 4rpx;
+    background-color: #FF4D00;
+    content: "";
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+}
+
+.swiper {
+    flex-grow: 1;
+    height: 100%;
+    background-color: #fff;
+}
+
+.middle-content {
+    margin: 0rpx 30rpx
+}
+
+.swiper-item-container {
+    margin: 0rpx 30rpx;
+    padding: 30rpx 0rpx;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.swiper-item-container image {
+    width: 210rpx;
+    height: 180rpx;
+    margin-right: 38rpx;
+}
+
+.item-right {
+    flex-grow: 1;
+}
+
+.item-right .title {
+    font-size: 32rpx;
+    margin-bottom: 24rpx;
+}
+
+.free-btn {
+    background-color: #FF7908;
+    color: #fff;
+    width: 180rpx;
+    height: 52rpx;
+    text-align: center;
+    line-height: 52rpx;
+    border-radius: 30rpx;
+}
+
+.kjeikai {
+    color: #FF2020;
+}

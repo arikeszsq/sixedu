@@ -1,0 +1,121 @@
+<view class="index-container">
+
+    <!-- banner -->
+    <view class="banner-container">
+        <image src="{{bannerInfo.src}}" class="banner" mode="scaleToFill"></image>
+        <view class="price-container">
+            <view class="middle-content">
+                <text class="price danger">
+                    <text class="yuan">￥</text>
+                    <text>268</text>
+                    <text class="end-padding">.00</text>
+                </text>
+                <text class="des">限时活动</text>
+            </view>
+
+        </view>
+        <view class="title-container middle-content">
+            <view class="title words">番茄亲子·2022艺术素质教育节·走进杭州</view>
+            <view class="sub-container box justify-between">
+                <view>
+                    <view class="des lightWords">杭州知名品牌机构，200+校区齐聚</view>
+                    <view class="scan lightWords">
+                        <text class="number primary">200012221</text>
+                        <text class="number-desc">浏览</text>
+                        <text class="separator">|</text>
+                        <text class="number primary">200012221</text>
+                        <text class="number-desc">23232</text>
+                        <text class="number-desc">购买</text>
+                    </view>
+                </view>
+                <image src="../../images/activity/git@2x.png" class="sub-image"></image>
+            </view>
+        </view>
+    </view>
+    <view class="separate"></view>
+    <!-- 购买记录 -->
+    <view class="purchase-container">
+        <swiper class="middle-content tab-right" vertical="true" autoplay="true" circular="true" interval="2000" display-multiple-items='3'>
+            <view class="purchase-container-sub">
+                <block wx:key="id" wx:for='{{PurchaseRecordInfo}}'>
+                    <swiper-item class="purchase-item">
+                        <view class='content-item box justify-between align-center'>
+                            <view class='box justify-between align-center'>
+                                <image src="{{item.avatar}}" class="avater"></image>
+                                <view class="purchase-call words">{{item.call}}</view>
+                            </view>
+                            <view class='lightWords'>支付{{item.price}}元</view>
+                            <view class='lightWords'>{{item.time}}</view>
+                        </view>
+                    </swiper-item>
+                </block>
+            </view>
+        </swiper>
+    </view>
+    <view class="separate separate-purchase"></view>
+
+    <!-- 机构组件 -->
+
+    <!-- 活动 -->
+    <view class="activity-container middle-content">
+        <!-- 滚动区域 -->
+        <view class="active-bar-container">
+            <scroll-view class="tab-scroll" scroll-x="true" :scroll-with-animation="true">
+                <view class="tab-scroll-box box">
+                    <block wx:for="{{ActiveBarList}}" wx:key="id">
+                        <view class="{{index===activeIndex?'active':'scroll-view-item'}}" bindtap="bindtapActiveBar" data-index="{{index}}">{{item.name}}</view>
+                    </block>
+                </view>
+            </scroll-view>
+
+            <swiper current='{{activeIndex}}' bindchange='changeCurrent'>
+                <swiper-item>sasssss</swiper-item>
+                <swiper-item>111111</swiper-item>
+                <swiper-item>33333</swiper-item>
+            </swiper>
+        </view>
+    </view>
+
+    <!-- 底部tab -->
+    <view class="tab-Bar-container">
+        <view class="middle-content tab-container box">
+            <view class="item">
+                <image src="../../images/activity/service@2x.png"></image>
+                <view>客服</view>
+            </view>
+            <view class="item">
+                <image src="../../images/activity/service@2x.png"></image>
+                <view>客服</view>
+            </view>
+            <view class="item">
+                <view class="intro">单独购买</view>
+                <view class="price">￥268</view>
+            </view>
+            <view class="item">
+                <view class="intro">单独购买</view>
+                <view class="price">￥268</view>
+            </view>
+        </view>
+
+    </view>
+</view>
+
+
+
+
+
+
+
+
+<!-- 活动列表页 -->
+<block wx:for="{{news}}" wx:for_item="item" wx:key="index">
+    <view class="activity" bindtap="toDetail" data-id="{{item.id}}" data-one="{{item.is_many}}">
+        <view class="left">
+            <image src="../../images/logo-toutiao.png" class="logo"></image>
+        </view>
+        <view class="right">
+            <view class="title">{{item.title}}</view>
+            <view class="intruduction">{{item.description}}</view>
+        </view>
+    </view>
+</block>

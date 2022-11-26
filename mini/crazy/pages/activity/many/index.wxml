@@ -1,0 +1,172 @@
+<view class="index-container">
+    <!-- banner -->
+    <view class="banner-container">
+        <image src="{{bannerInfo}}" class="banner" mode="scaleToFill"></image>
+        <view class="price-container">
+            <view class="middle-content">
+                <text class="price danger">
+                    <text class="yuan">￥</text>
+                    <text>{{oriPrice}}</text>
+
+                </text>
+                <text class="des">限时活动</text>
+            </view>
+
+        </view>
+        <view class="title-container middle-content">
+            <view class="title words">{{info.title}}</view>
+            <view class="sub-container box justify-between">
+                <view>
+                    <view class="des lightWords">{{info.description}}</view>
+                    <view class="scan lightWords">
+                        <text class="number primary">{{info.views_num}}</text>
+                        <text class="number-desc">浏览</text>
+                        <text class="separator">|</text>
+                        <text class="number primary">{{info.buy_num}}</text>
+
+                        <text class="number-desc">购买</text>
+                    </view>
+                </view>
+                <!-- <image src="../../../images/activity/git@2x.png" class="sub-image"></image> -->
+            </view>
+        </view>
+    </view>
+    <view class="separate"></view>
+    <!-- 购买记录 -->
+    <view class="index-title">
+        购买记录
+    </view>
+    <view class="purchase-container">
+        <swiper class="middle-content tab-right" vertical="true" autoplay="true" circular="true" interval="2000" display-multiple-items='3'>
+            <view class="purchase-container-sub">
+                <block wx:key="id" wx:for='{{info.pay_group_list}}'>
+                    <swiper-item class="purchase-item">
+                        <view class='content-item box justify-between align-center'>
+                            <view class='box justify-between align-center'>
+                                <image src="{{item.avatar}}" class="avater"></image>
+                                <view class="purchase-call words">{{item.name}}</view>
+                            </view>
+                            <view class='lightWords'>支付{{item.money}}元</view>
+                            <view class='lightWords'>{{item.pay_time}}</view>
+                        </view>
+                    </swiper-item>
+                </block>
+            </view>
+        </swiper>
+    </view>
+    <view class="separate separate-purchase"></view>
+
+    <!-- 机构视频 -->
+    <view class="index-title">
+        机构视频
+    </view>
+    <view class="video-container">
+        <swiper bindchange='changeVideoCurrent' current="{{videoIndex}}">
+            <swiper-item wx:for="{{info.video}}" wx:key="index" bindpause="videoPause">
+                <video id="myVideo" id="video{{index}}" src="{{item.video_url}}"  show-center-play-btn='{{true}}' show-play-btn="{{true}}" controls="{{true}}" object-fit="contain" enable-play-gesture='{{true}}' poster="{{item.company_logo}}" bindenterpictureinpicture='bindVideoEnterPictureInPicture' bindleavepictureinpicture='bindVideoLeavePictureInPicture'></video>
+            </swiper-item>
+        </swiper>
+        <scroll-view class="tab-scroll  viedo-scroll" scroll-x="true" :scroll-with-animation="true">
+            <view class="tab-scroll-box box">
+                <block wx:for="{{info.video}}" wx:key="index">
+                    <view class="item {{index===videoIndex?'active':''}}" bindtap="bindtapVideoBar" data-index="{{index}}">
+                        <view class="video-image">
+                            <image src="{{item.company_logo}}" mode="aspectFit"></image>
+                        </view>
+                        <view style="text-align: center;"> {{item.company_name}}</view>
+
+                    </view>
+                </block>
+
+            </view>
+        </scroll-view>
+    </view>
+
+    <view class="separate separate-purchase"></view>
+
+    <!-- 活动 -->
+    <view class="activity-container  all_view">
+        <!-- 滚动区域 -->
+        <view class="active-bar-container">
+            <scroll-view class="tab-scroll middle-content" scroll-x="true" :scroll-with-animation="true">
+                <view class="tab-scroll-box box">
+                    <block wx:for="{{ActiveBarList}}" wx:key="id">
+                        <view class="scroll-view-item {{index===activeIndex?'active':''}}" bindtap="bindtapActiveBar" data-index="{{index}}">{{item.name}}</view>
+                    </block>
+                </view>
+            </scroll-view>
+            <!-- 地图 -->
+            <view class="map box justify-between align-center">
+                <image class="icons" src="../../../images/activity/dizhi.png"></image>
+                <view class="address" bindtap="searchNearOrgan">
+                    {{adressObj.name}}
+                </view>
+                <view class="home-set" bindtap="setHomeAdress">点击设置家的位置</view>
+            </view>
+            <view class="swiper-index-container middle-content">
+                <swiper style="height:{{height}}rpx" current='{{activeIndex}}' bindchange='changeCurrent'>
+                    <swiper-item>
+                        <view class="timu_list0">
+                            <rich-text nodes="{{info.content}}"></rich-text>
+                        </view>
+                    </swiper-item>
+                    <swiper-item>
+                        <view class="timu_list1">
+                            <view class="listItem-container">
+                                <view class="timu-list1-item box  align-center" wx:for="{{info.company_list}}" wx:key="id">
+                                    <view class="image-container" wx:if="{{item.company_logo}}">
+                                        <image mode="aspectFit" src="{{item.company_logo}}"></image>
+                                    </view>
+                                    <view class="timu-list1-container">
+                                        <view class="title">{{item.company_name}}</view>
+                                        <view class="desc gray">
+                                            <view>校区：{{item.school_num}}</view>
+                                            <view>机构课程：{{item.sign_user_num}}</view>
+                                            <view>报名人数：{{item.course_num}}</view>
+                                        </view>
+
+                                    </view>
+                                    <view class="address gray">
+                                        离家14.2km</view>
+                                </view>
+                            </view>
+                        </view>
+                    </swiper-item>
+                    <swiper-item>
+                        <view class="timu_list2">
+                            <view class="listItem-container">
+                                <view class="timu-list1-item box  align-center" wx:for="{{info.award}}" wx:key="id">
+                                    <view class="image-container" wx:if="{{item.logo}}">
+                                        <image mode="aspectFit" src="{{item.logo}}"></image>
+                                    </view>
+                                    <view class="timu-list1-container">
+                                        <view class="title">{{item.name}}</view>
+                                        <view class="desc gray">
+                                            <view>{{item.short_name}}</view>
+                                            <view>{{item.description}}</view>
+                                            <view>{{item.price}}</view>
+                                        </view>
+
+                                    </view>
+
+                                </view>
+                            </view>
+                        </view>
+                    </swiper-item>
+                </swiper>
+            </view>
+
+
+        </view>
+    </view>
+
+    <!-- 底部空白区 -->
+    <view class="bottom-padding"></view>
+
+    <!-- 客服 -->
+    <Service id="Service" oriPrice="{{oriPrice}}" realPrice="{{realPrice}}"
+     bindtoCourseOne="toCourseOne"
+     bindtoCourseTwo="bindtoCourseTwo"
+    ></Service>
+
+</view>

@@ -1,0 +1,36 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/activity/one/index",
+        "pages/activity/many/index",
+        "pages/activity/group/index",
+        "pages/activity/createActivity/index",
+        "pages/activity/pay/index",
+        "pages/course/course",
+        "pages/mine/mine",
+        "pages/myAward/myAward",
+        "pages/myOrder/myOrder",
+        "pages/Agreement/Agreement",
+        "pages/position/position",
+        "pages/checkSchool/checkSchool",
+        "pages/list/list",
+        "pages/logs/logs",
+        "pages/myProfit/myProfit"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "番茄亲子·活动",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents",
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    },
+    "requiredPrivateInfos": [
+        "chooseLocation"
+    ]
+}

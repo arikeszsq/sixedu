@@ -1,0 +1,14 @@
+/* pages/Agreement/Agreement.wxss */
+.agree-container{
+    padding:0px 44rpx
+}
+.agree-container .title{
+   padding-bottom: 24rpx; 
+   font-weight: bold;
+}
+.container-text {
+    line-height: 44rpx;
+}
+.container-text view{
+    padding-bottom: 20rpx; 
+}

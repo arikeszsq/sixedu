@@ -1,0 +1,161 @@
+/* 客服 */
+@import "../../app.wxss";
+
+.dialogue {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    top: 0px;
+    left: 0px;
+    display: none;
+
+}
+/* 出现 */
+.active {
+    display: block;
+}
+
+.icon-call {
+    width: 32rpx;
+    height: 32rpx;
+}
+
+.code {
+    margin-bottom: 46rpx;
+    width: 380rpx;
+    height: 380rpx;
+    background-color: #000;
+}
+
+.closed {
+    margin-top: 63rpx;
+    width: 100%;
+    text-align: center;
+    height: 110rpx;
+    line-height: 110rpx;
+    font-size: 30rpx;
+    border-top: 1px solid #dfdfdf;
+}
+
+.dialogue-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.dialogue-item {
+    width: 660rpx;
+    height: 911rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 10rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.dialogue-item .phone-container {
+    width: 80%;
+
+}
+
+.phone-container-bj {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 24rpx;
+    margin-bottom: 62rpx;
+}
+
+.dialogue-item .title {
+    font-size: 32rpx;
+    font-weight: bold;
+    margin: 50rpx 0px 40rpx;
+}
+
+
+
+.dialogue-item .phone-container .phone {
+    font-size: 32rpx;
+    margin-left: 28rpx;
+    flex-grow: 1;
+}
+
+.navigator-call {
+    font-size: 26rpx;
+    color: #fff;
+    background-color: #FF7908;
+    width: 160rpx;
+    height: 58rpx;
+    line-height: 58rpx;
+    text-align: center;
+    border-radius: 30rpx;
+}
+
+
+.tab-Bar-container {
+    position: fixed;
+    bottom: 0px;
+    height: 120rpx;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #f2f2f2;
+    box-sizing: border-box;
+}
+
+.tab-container {
+    height: 100%;
+    align-items: stretch;
+}
+
+.tab-container image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.tab-container .item {
+    padding-top: 20rpx;
+    text-align: center;
+}
+
+.tab-container .item:nth-of-type(1) {
+    width: 209rpx;
+}
+
+.tab-container .item .item-01 {
+    padding-left: 36rpx;
+    padding-right: 40rpx;
+}
+
+.tab-container .item .item-02 {
+    font-size: 24rpx;
+}
+
+.tab-container .item:nth-of-type(2) {
+    color: #fff;
+    width: 284rpx;
+    background: linear-gradient(90deg, #FF7A08 0%, #FF4D00 100%);
+    opacity: 0.5;
+
+}
+
+.tab-container .item .intro {
+    font-size: 28rpx;
+}
+
+.tab-container .item .price {
+    font-size: 34rpx;
+    padding-top:18rpx;
+}
+
+.tab-container .item:nth-of-type(3) {
+    color: #fff;
+    width: 284rpx;
+    background-color: #FF4D00FF;
+
+}

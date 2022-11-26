@@ -1,0 +1,12 @@
+<!-- 活动列表页 -->
+<block wx:for="{{news}}" wx:for_item="item" wx:key="index">
+    <view class="activity" bindtap="toDetail" data-id="{{item.id}}" data-one="{{item.is_many}}">
+        <view class="left">
+            <image src="{{item.bg_banner}}" class="logo"></image>
+        </view>
+        <view class="right">
+            <view class="title">{{item.title}}</view>
+            <view class="intruduction">{{item.description}}</view>
+        </view>
+    </view>
+</block>

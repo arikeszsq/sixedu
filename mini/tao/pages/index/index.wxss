@@ -1,0 +1,32 @@
+.activity{
+    display: flex;
+    border: 1px solid #dfdfdf;
+    box-sizing: border-box;
+    margin: 20rpx;
+    border-radius: 10rpx;
+    padding: 20rpx;
+  }
+  
+  .activity .left{
+    margin-right: 15rpx;
+  }
+  
+  .activity .title{
+   font-size: 30rpx;
+   color: #464646;
+  }
+  
+  .activity .intruduction{
+    font-size: 26rpx;
+    color: rgb(155, 154, 154);
+   }
+  
+  .activity .logo{
+    width: 160rpx;
+    height: 160rpx;
+    margin-right: 20rpx;
+  }
+  
+  .activity .intruduction{
+    overflow: hidden;
+  }

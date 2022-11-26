@@ -1,0 +1,81 @@
+<!--pages/activity/group/index.wxml-->
+<view class="group-container">
+    <!-- 搜索 -->
+    <view class="search">
+        <input class="weui-input"  bindinput="onChangeSearch" value="{{group_name}}" placeholder="搜索团长名称" />
+        <view>
+            <image class="weui-image" src="../../../images/activity/sousuo.png"></image>
+        </view>
+    </view>
+    <!-- 内容 -->
+    <view class="group-container-list">
+        <view class="group-item" wx:for="{{groupLists}}" wx:key="gruop_id">
+            <!-- 一级菜单位置 -->
+            <view class="group-item-list box">
+                <view class="avatar-item" bindtap="handleSubShow" data-index="{{item.gruop_id}}">
+                    <image src="{{item.avatar}}"></image>
+                </view>
+                <view class="group-item-content" bindtap="handleSubShow" data-index="{{item.gruop_id}}">
+                    <view class="title">
+                        <text class="t">{{item.leader_name}}</text>
+                        <text class="team">团长</text>
+                    </view>
+                    <view class="desc box">
+                        <text class="d">本团已有{{item.current_num}}人</text>
+                        <image src="../../../images/activity/topArrow.png" class="topArrow {{isTopArrow?'showArrow':''}}"></image>
+                        <image src="../../../images/activity/bottomArrow.png" class="topArrow  {{!isTopArrow?'showArrow':''}}"></image>
+                    </view>
+                </view>
+                <view class="group-item-btn" data-id="{{item.gruop_id}}" bindtap="handleSucessGroup">立即参与</view>
+            </view>
+            <!-- 二级菜单位置 -->
+            <view class="sub-item sub-show" wx:if="{{isExTand===item.gruop_id&&groupOneList.length}}">
+                <!-- 循环位置 -->
+                <view class="box sub-item-container" wx:for="{{groupOneList}}" wx:key="index">
+                    <!-- 循环时候需要判断index===1?'avatar-team' -->
+                    <view class="avatar-sub avatar-team">
+                        <image src="{{item.avatar}}"></image>
+                        <!-- 团长的判断 -->
+                        <view class="avatar-item-team" wx:if="{{item.role==1}}">团长</view>
+                    </view>
+                    <view class="title">{{item.name}}</view>
+                    <view class="time">{{item.created_at}} {{item.role==1?"开团":"参团"}}</view>
+                </view>
+
+            </view>
+        </view>
+
+    </view>
+    <view class="dislogue-group-bj {{isShowDislogue?'show-dislogue':''}}">
+        <form bindsubmit="doPay">
+            <view class="dislogue-group">
+                <view class="top">
+                    <view class="dislogue-title">立即参团</view>
+                    <view class="closed" bindtap="handleClosed">❌</view>
+                </view>
+                <view class="from-dislogue">
+                    <view class="group-item-dis">
+                        <text>姓名</text>
+                        <input type="text" name="name" placeholder-class="placeholder-style" placeholder="请输入" value="{{name}}" />
+                    </view>
+                    <view class="group-item-dis">
+                        <text>手机</text>
+                        <input type="text" name="phoneNum" placeholder-class="placeholder-style" placeholder="请输入" value="{{phoneNum}}" />
+                    </view>
+                    <view class="desc-dis">请在姓名一栏填写孩子名字</view>
+                    <view class="info">
+                        <!-- 下来选框-->
+                        <view class="bt">信息一</view>
+                        <input type="text" name="info1" placeholder-class="placeholder-style" placeholder="请输入" value="{{info1}}" />
+                    </view>
+                    <view class="info info2">
+                        <view class="bt">信息二</view>
+                        <input type="text" name="info2" placeholder-class="placeholder-style" placeholder="请输入" value="{{info2}}" />
+                    </view>
+                    <!-- <view class="btn-ss" bindtap="doPay">提交</view> -->
+                    <button class="btn-ss" form-type='submit'>提交</button>
+                </view>
+            </view>
+        </form>
+    </view>
+</view>

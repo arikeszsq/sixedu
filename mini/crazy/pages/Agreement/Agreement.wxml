@@ -1,0 +1,20 @@
+<!--pages/Agreement/Agreement.wxml-->
+<view class="agree-container">
+    <view class="title">购买协议</view>
+    <view class="container-text">
+        <view> 一、本次活动所有精品课程由本市多家知名机构联合推出，秒杀1年(36-48课时)，每个孩子任选3或4门课程。</view>
+        <view> 二、每门8-12课时(4-6次课) 不选满3门或4门课程课程或所选课程一年内不参与学习的均视为自动放弃，不学或学完概不退费;</view>
+        <view> 三、秒杀支付一旦选课概不退费，每人每单所选课程不得重复，最多不超过3门课程;</view>
+        <view> 四、学习期限1年内有效，过期视为自动放弃; </view>
+        <view> 五、校方从活动结束一周后回访确认排课时间;</view>
+        <view> 六、为配合整体教学进度，若学员未按照学校安排课时到勤者，学校不予补课;</view>
+        <view> 七、在法律允许范围内本活动最终解释权归所报课程所在的机构所有。</view>
+    </view>
+    <view class="title">特别提醒:</view>
+    <view class="container-text">
+        <view>一、招生活动报名结束后，有课程问题向所报课程机构进行协调沟通;</view>
+        <view>
+二、若1年之内所报课程的机构出现授课地址变更或机构
+</view>
+    </view>
+</view>

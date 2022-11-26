@@ -1,0 +1,356 @@
+/* pages/activity/group/index.wxss */
+.group-container {
+    padding: 0px 30rpx;
+}
+
+.search {
+    position: relative;
+    height: 62rpx;
+    border-radius: 31rpx;
+    background-color: #f6f6f6;
+    padding-left: 70rpx;
+}
+
+.weui-input {
+    height: 62rpx;
+    border-radius: 31rpx;
+}
+
+.weui-image {
+    top: 50%;
+    left: 20rpx;
+    transform: translateY(-50%);
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+}
+
+.group-item-list {
+    align-items: center;
+    padding-bottom: 16rpx;
+    border-bottom: 2rpx solid #f2f2f2;
+}
+
+.team {
+    color: #fff;
+    padding: 2rpx 8rpx;
+    font-size: 22rpx;
+    background-color: #36B8B0;
+    border-radius: 4rpx;
+    margin-left: 12rpx;
+}
+
+.topArrow {
+    display: none;
+    border-radius: 50%;
+}
+
+/* 按钮显示上还是下的 */
+.showArrow {
+    display: block;
+}
+
+.sub-item {
+    display: none;
+}
+
+/* 控制二级菜单显示的 */
+.sub-show {
+    display: block;
+}
+
+.group-item {
+    margin-top: 44rpx
+}
+
+.group-item-content .title .t {
+    font-size: 30rpx;
+    color: #333;
+}
+
+.group-item-content .desc {
+    margin-top: 5rpx;
+}
+
+.group-item-content .topArrow {
+    margin-top: 4rpx;
+    margin-left: 5rpx;
+}
+
+.group-item-content .desc .d {
+    font-size: 26rpx;
+    color: #858585;
+}
+
+.avatar-item image {
+    width: 68rpx;
+    height: 68rpx;
+    border-radius: 50%;
+    margin-right: 22rpx;
+}
+
+.avatar-team {
+    padding-bottom: 10rpx;
+    position: relative;
+}
+
+.avatar-item-team {
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    color: #fff;
+    width: 62rpx;
+    height: 34rpx;
+    line-height: 34rpx;
+    font-size: 22rpx;
+    text-align: center;
+    background-color: #36B8B0;
+    border-radius: 4rpx;
+    bottom: 0rpx;
+}
+
+.topArrow {
+    width: 26rpx;
+    height: 26rpx;
+}
+
+.avatar-item image {
+    width: 68rpx;
+    height: 68rpx;
+}
+
+.group-item-content {
+    width: 462rpx;
+}
+
+.group-item-btn {
+    width: 160rpx;
+    height: 58rpx;
+    background-color: #FF7908;
+    color: #fff;
+    line-height: 58rpx;
+    text-align: center;
+    font-size: 26rpx;
+    border-radius: 30rpx;
+}
+
+.sub-item {
+    padding: 40rpx 30rpx;
+    border-radius: 10rpx;
+    margin-top: 34rpx;
+    background-color: #f9f9f9;
+}
+
+.sub-item-container {
+    align-items: center;
+    margin-bottom: 34rpx;
+}
+
+.avatar-sub {
+    width: 86rpx;
+    height: 86rpx;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    margin-right: 22rpx;
+}
+
+.sub-item image {
+    width: 86rpx;
+    height: 86rpx;
+}
+
+.sub-item .title {
+    font-size: 34rpx;
+    color: #333;
+    font-weight: bold;
+    flex: 1;
+}
+
+.sub-item .time {
+    color: #858585
+}
+
+
+/* 下拉框 */
+/* search */
+.search-bar {
+    width: 100%;
+    height: 80rpx;
+    background: #fff;
+    /* border-top: 1rpx solid #f6f6f6; */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    /* border: 1rpx solid red; */
+}
+
+.search-bar .condition {
+    width: 100%;
+    /* border-radius: 30rpx; */
+    padding:0rpx 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 8rpx;
+    background-color: #F8F8F8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.search-bar .condition .option-list {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    left: 0;
+    top: 80rpx;
+    box-sizing: border-box;
+    background: #f8f8f8;
+    padding: 0rpx 20rpx;
+    margin-top: 4rpx;
+    border-radius: 6rpx;
+}
+
+.option-list .list-item {
+    color: #BABABA;
+    font-size: 26rpx;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-bar .condition .select-condition {
+    color: #BABABA;
+    font-size: 26rpx;
+}
+
+.search-bar .condition .trigger {
+    width: 0;
+    height: 0;
+    border: 12rpx solid transparent;
+    border-top: 15rpx solid #c2c2c2;
+    position: relative;
+    top: 8rpx;
+    transform: rotate(0deg);
+    transform-origin: center 7rpx;
+    transition: transform 0.4s;
+}
+
+.search-bar .condition .trigger.reverse {
+    transform: rotate(180deg);
+    transform-origin: center 7rpx;
+    transition: transform 0.4s;
+}
+
+/* 下拉框结束 */
+.dislogue-group-bj {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0rpx;
+    left: 0rpx;
+    display: none;
+}
+.show-dislogue{
+    display: block;
+}
+.dislogue-group {
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    width: 550rpx;
+    height: 970rpx;
+    background-color: #fff;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.dislogue-title {
+    color: #7e5949;
+    margin-bottom: 10rpx;
+}
+
+.dislogue-group image {
+    width: 48rpx;
+    height: 48rpx;
+    margin-right: 20rpx;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+}
+
+.dislogue-group .name {
+    color: #7e5949;
+    font-size: 30rpx;
+}
+
+.dislogue-group .top {
+    position: relative;
+    display: flex;
+    padding: 20rpx 0rpx;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4e8d8;
+}
+.closed{
+    position: absolute;
+    width: 48rpx;
+    height: 48rpx;
+    right:30rpx;
+}
+.from-dislogue {
+    box-sizing: border-box;
+    margin: 30rpx 30rpx;
+}
+
+.group-item-dis {
+    padding:0rpx 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 8rpx;
+    background-color: #F8F8F8;
+    display: flex;
+    margin-bottom: 20rpx;
+}
+.group-item-dis text{
+width: 100rpx;
+flex:0 0 auto;
+}
+.group-item-dis input{
+    height: 80rpx;
+    width: 100%;
+    flex:1 1 auto;
+    line-height: 80rpx;
+    margin-left: 30rpx;
+}
+.info{
+    margin-top: 30rpx;
+}
+.info .bt{
+    margin-bottom: 10rpx;
+}
+.desc-dis{
+    color: #63493c;
+    text-align: center;
+    font-size: 28rpx;
+    margin-top: 20rpx;
+}
+.btn-ss{
+    width: 100%;
+    height: 80rpx;
+    border-radius: 40rpx;
+    text-align: center;
+    color: #fff;
+    line-height: 80rpx;
+    margin-top: 70rpx;
+    background-image: linear-gradient(90deg, #FF7A08 0%, #FF4D00 100%);
+}
+.placeholder-style{
+    color: #BABABA;
+    font-size: 26rpx;
+}

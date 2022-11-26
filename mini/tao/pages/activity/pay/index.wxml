@@ -1,0 +1,64 @@
+<!--pages/activity/pay/index.wxml-->
+<view class="pay-container">
+    <view class="form-information">
+
+        <!-- 用户信息 -->
+        <view class="user-info form-info">
+            <view class="title">报名信息</view>
+            <view class="box form-item">
+                <view class="intro"><text>*</text>学生姓名</view>
+                <input type="text" bindchange="handleNameInput" value="{{userInfo.sign_name}}" placeholder="请填写上课学员姓名" placeholder-class="placeholder-style" />
+            </view>
+            <view class="box form-item">
+                <view class="intro"><text>*</text>报名手机</view>
+                <input type="number" maxlength="13" value="{{userInfo.sign_mobile}}" bindchange="handlechange" placeholder="请填写常用手机号，务必准确" placeholder-class="placeholder-style" />
+            </view>
+            <view class="box form-item">
+                <view class="intro"><text>*</text>年龄</view>
+                <input type="text" value="{{userInfo.sign_age}}" placeholder="请填写学员年龄，务必准确" placeholder-class="placeholder-style" bindchange="handleAgeInput" />
+            </view>
+            <view class="box form-item">
+                <text class="intro">性别</text>
+                <radio-group name="radio" bindchange="handleMaleChange">
+                    <label>
+                        <radio value="male" checked="{{userInfo.sign_sex}}" /><text class="fele-info">男</text>
+                    </label>
+                    <label>
+                        <radio value="female" checked="{{!userInfo.sign_sex}}" /><text class="fele-info">女</text>
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <!-- 选课信息 -->
+        <view class="user-course form-info">
+            <view class="title">选课信息</view>
+            <view class="course-container">
+                <!-- 环位置循 -->
+                <view class="course-item box" wx:for="{{courseInfo}}">
+                    <view class="image-tu">
+                        <image src="{{item.course_logo}}"></image>
+                    </view>
+                    
+                    <view class="info">
+                        <view class="title-course">{{item.course_name}}</view>
+                        <view class="des">机构：{{item.company_name}}</view>
+                    </view>
+                </view>
+            </view>
+            <!-- 购买协议 -->
+            <view class="agreement  box">
+                <checkbox-group bindchange="handleAgreement">
+                <checkbox class="agreement-checked" id="agreement" checked="{{userInfo.is_agree}}" >
+                </checkbox>
+                </checkbox-group>
+                <navigator url="/pages/Agreement/Agreement" class="agreement-text">已阅读并同意《用户购买协议》</navigator>
+            </view>
+
+        </view>
+        <!-- 固定窗口 -->
+        <view class="box bottom">
+            <view class="price"><text>总价：</text>￥{{money}}</view>
+            <view class="confirm" bindtap="doPay">确认支付</view>
+        </view>
+    </view>
+</view>

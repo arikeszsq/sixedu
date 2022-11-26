@@ -1,0 +1,569 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Example for response examples value",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api": {},
+        "/api/activity/lists": {
+            "get": {
+                "tags": [
+                    "活动"
+                ],
+                "summary": "活动列表",
+                "operationId": "077758bd119828e8d64f54c09c2a8687",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/activity/type/{id}": {
+            "get": {
+                "tags": [
+                    "活动"
+                ],
+                "summary": "活动类型",
+                "operationId": "2cbab667c0c3c319bb99843ed5493cdc",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "活动类型 ：1单商家， 2多商家",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/activity/detail/{id}": {
+            "get": {
+                "tags": [
+                    "活动"
+                ],
+                "summary": "活动详情",
+                "operationId": "4ee5ea9778c92f1ae5d3777027c305f1",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "活动详情",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/activity/invite-user": {
+            "post": {
+                "tags": [
+                    "邀请新用户"
+                ],
+                "summary": "邀请接口 【判断有邀请人的uid ，就调用邀请接口，或者通过分享连接，也调用一次分享接口】",
+                "operationId": "09ec750bfece7fdb3b9384a46e2657dd",
+                "requestBody": {
+                    "description": "address edit",
+                    "required": true,
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "activity_id": {
+                                        "description": "活动的id",
+                                        "type": "Integer"
+                                    },
+                                    "parent_user_id": {
+                                        "description": "邀请人的id",
+                                        "type": "Integer"
+                                    },
+                                    "invited_user_id": {
+                                        "description": "被邀请人的id",
+                                        "type": "Integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "100000": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/api/award/create": {
+            "post": {
+                "tags": [
+                    "奖励"
+                ],
+                "summary": "领取奖励",
+                "operationId": "40b7b9904ef73cc0e3cd3e6a91469423",
+                "requestBody": {
+                    "description": "领取奖励",
+                    "required": true,
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "activity_id": {
+                                        "description": "活动的id",
+                                        "type": "Integer"
+                                    },
+                                    "id": {
+                                        "description": "奖励的id",
+                                        "type": "Integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "100000": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/api/award/lists": {
+            "get": {
+                "tags": [
+                    "奖励"
+                ],
+                "summary": "奖励列表",
+                "operationId": "c12325b5d1870f5d8d55f3afc4826ff9",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/award/my-lists": {
+            "get": {
+                "tags": [
+                    "奖励"
+                ],
+                "summary": "我的奖励",
+                "operationId": "6ba70c9f3688faea9408af4ff2c2daea",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/basic/settings": {
+            "get": {
+                "tags": [
+                    "基础信息"
+                ],
+                "summary": "基础配置",
+                "operationId": "1467dfa9fbb4e53772f9df458683ee99",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/course/type-lists": {
+            "get": {
+                "tags": [
+                    "课程"
+                ],
+                "summary": "课程分类",
+                "operationId": "8909b306abee4b79f4c5ddb375b7269d",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/course/lists": {
+            "get": {
+                "tags": [
+                    "课程"
+                ],
+                "summary": "课程列表",
+                "operationId": "cc43c0f6bc1edd8d6e3cace60b666bc3",
+                "parameters": [
+                    {
+                        "name": "activity_id",
+                        "in": "query",
+                        "description": "活动id",
+                        "required": true
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "课程类型：1 => '早教',2 => '水育',3 => '美术',4 => '乐高',5 => '围棋',6 => '硬笔',7 => '软笔',8 => '国画',"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/course/detail/{id}": {
+            "get": {
+                "tags": [
+                    "课程"
+                ],
+                "summary": "课程详情",
+                "operationId": "86afe689330c9dad619e5678a61460b3",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "课程详情",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/course/company-child-lists/{id}": {
+            "get": {
+                "tags": [
+                    "课程"
+                ],
+                "summary": "课程校区列表",
+                "operationId": "82173a996f6a8a65fa9c6dcc44310853",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "课程Id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/group/lists": {
+            "get": {
+                "tags": [
+                    "团"
+                ],
+                "summary": "团列表",
+                "operationId": "cd8de25012db8647d3a30c600bc5273a",
+                "parameters": [
+                    {
+                        "name": "activity_id",
+                        "in": "query",
+                        "description": "活动id",
+                        "required": true
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "团的名字"
+                    },
+                    {
+                        "name": "avatar",
+                        "in": "query",
+                        "description": "团长头像"
+                    },
+                    {
+                        "name": "leader_name",
+                        "in": "query",
+                        "description": "团长名字"
+                    },
+                    {
+                        "name": "leader_id",
+                        "in": "query",
+                        "description": "团长ID"
+                    },
+                    {
+                        "name": "num",
+                        "in": "query",
+                        "description": "成团需求人数"
+                    },
+                    {
+                        "name": "current_num",
+                        "in": "query",
+                        "description": "团现拥有人数"
+                    },
+                    {
+                        "name": "finished",
+                        "in": "query",
+                        "description": "是否已成团：1是 ，2否"
+                    },
+                    {
+                        "name": "in_group",
+                        "in": "query",
+                        "description": "我是否在团里，1是2否，判断在团里就是邀请别人，不在团里就是加入团"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/group/user-lists/{id}": {
+            "get": {
+                "tags": [
+                    "团"
+                ],
+                "summary": "参团的用户列表",
+                "operationId": "d38d77b39ed645fa15d7d09cab2972d5",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "团id",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/login": {
+            "post": {
+                "tags": [
+                    "登录"
+                ],
+                "summary": "登录",
+                "operationId": "c5e838284c7f343f0e5e5fd589161c96",
+                "requestBody": {
+                    "description": "address edit",
+                    "required": true,
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "code": {
+                                        "description": "code",
+                                        "type": "String"
+                                    },
+                                    "iv": {
+                                        "description": "iv",
+                                        "type": "String"
+                                    },
+                                    "data": {
+                                        "description": "data",
+                                        "type": "String"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "100000": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "token": {
+                                        "summary": "token",
+                                        "value": {
+                                            "token": "asfasdfasdfasdf"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/order/lists": {
+            "get": {
+                "tags": [
+                    "订单"
+                ],
+                "summary": "订单列表",
+                "operationId": "15d7e4d4253fed1cf19c2e2bed6721df",
+                "parameters": [
+                    {
+                        "name": "activity_id",
+                        "in": "query",
+                        "description": "活动id",
+                        "required": true
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "description": "订单状态：1 待支付 2支付取消 3支付成功"
+                    },
+                    {
+                        "name": "finished",
+                        "in": "query",
+                        "description": "是否已成团：1是 ，2否"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/pay/pay": {
+            "post": {
+                "tags": [
+                    "支付"
+                ],
+                "summary": "支付",
+                "operationId": "040427ed825122d43a7c89f2dffafe78",
+                "requestBody": {
+                    "description": "支付",
+                    "required": true,
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "activity_id": {
+                                        "description": "活动的id",
+                                        "type": "Integer"
+                                    },
+                                    "type": {
+                                        "description": "开团类型必填：1开团 2单独购买",
+                                        "type": "Integer"
+                                    },
+                                    "sign_name": {
+                                        "description": "报名学生姓名必填",
+                                        "type": "Integer"
+                                    },
+                                    "sign_mobile": {
+                                        "description": "报名手机号必填",
+                                        "type": "Integer"
+                                    },
+                                    "sign_age": {
+                                        "description": "报名学生年龄",
+                                        "type": "Integer"
+                                    },
+                                    "sign_sex": {
+                                        "description": "性别：1男2女",
+                                        "type": "Integer"
+                                    },
+                                    "course_ids": {
+                                        "description": "课程，1，2，3",
+                                        "type": "Integer"
+                                    },
+                                    "is_agree": {
+                                        "description": "同意协议 1",
+                                        "type": "Integer"
+                                    },
+                                    "school_child_ids": {
+                                        "description": "校区，1，2，3",
+                                        "type": "Integer"
+                                    },
+                                    "info_one": {
+                                        "description": "信息一",
+                                        "type": "Integer"
+                                    },
+                                    "info_two": {
+                                        "description": "信息二",
+                                        "type": "Integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "100000": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/api/user/info": {
+            "get": {
+                "tags": [
+                    "用户"
+                ],
+                "summary": "用户信息",
+                "operationId": "3f02fc8ab861223fc17ee7469503be38",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/user/update": {
+            "post": {
+                "tags": [
+                    "用户"
+                ],
+                "summary": "设置家的位置",
+                "operationId": "46d4b4856e6c94907f9192207b4c8121",
+                "requestBody": {
+                    "description": "设置家的位置",
+                    "required": true,
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "map_points": {
+                                        "description": "设置家的地址，纬经度",
+                                        "type": "String"
+                                    },
+                                    "address": {
+                                        "description": "设置家的地址",
+                                        "type": "String"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "100000": {
+                        "description": "success"
+                    }
+                }
+            }
+        }
+    }
+}
